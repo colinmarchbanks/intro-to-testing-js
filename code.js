@@ -11,3 +11,7 @@ const helloWorld = function() {
 const sayHello = function (x) {
     return "Hello, " + x + "!";
 };
+
+const isFive = function (x) {
+    return x == 5;
+};
