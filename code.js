@@ -15,3 +15,8 @@ const sayHello = function (x) {
 const isFive = function (x) {
     return x == 5;
 };
+
+const isEven = function (x) {
+    return parseFloat(x) % 2 === 0;
+
+};
