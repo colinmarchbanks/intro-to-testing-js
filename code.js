@@ -2,7 +2,7 @@
 // function helloWorld() {
 //     return "Hello, World!";
 // }
-
+"use strict";
 // function expression syntax (assigning an anonymous function to a variable)
 const helloWorld = function() {
     return "Hello, World!";
@@ -35,4 +35,8 @@ const isVowel = function(x){
         return true;
     }
     else return x === 'U' || x === 'u';
+};
+
+const add = function(x,y){
+    return parseFloat(x) + parseFloat(y);
 };

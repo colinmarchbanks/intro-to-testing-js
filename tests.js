@@ -121,3 +121,36 @@ describe('isVowel',function () {
         expect(isVowel(null)).toBe(false);
     });
 });
+
+describe('add',function () {
+    it('should be a defined function', function () {
+        expect(typeof add).toBe('function');
+    });
+    it('should return a number', function () {
+        expect(typeof add()).toBe('number');
+    });
+    it('should return 5 when passed 2 and 3', function () {
+        expect(add(2,3)).toBe(5);
+    });
+    it('should return 10 when passed 6 and 4', function () {
+        expect(add(6,4)).toBe(10);
+    });
+    it('should return -12 when passed -3 and -9', function () {
+        expect(add(-3,-9)).toBe(-12);
+    });
+    it('should return 11 when passed "5" and 6', function () {
+        expect(add("5",6)).toBe(11);
+    });
+    it('should return 6 when pass "10" and "-4"', function () {
+        expect(add("10","-4")).toBe(6);
+    });
+    it('should return NaN when passed "banana" and "split"', function () {
+        expect(add("banana","split")).toBeNaN();
+    });
+    it('should return NaN when passed 2 and "apples"', function () {
+        expect(add(2,"apples")).toBeNaN();
+    });
+    it('should return NaN when passed with no arguments', function () {
+        expect(add()).toBeNaN();
+    });
+});
