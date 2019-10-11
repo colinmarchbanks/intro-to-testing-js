@@ -1,3 +1,5 @@
+"use strict";
+
 // Unit tests for the helloWorld function
 describe('helloWorld', function() {
     it('should be a defined function', function() {
@@ -86,9 +88,36 @@ describe('isEven',function () {
 
 describe('isVowel',function () {
     it('should be a defined function', function () {
-        expect(typeof isVowel).toBe(function ()
+        expect(typeof isVowel).toBe('function');
     });
     it('should return a boolean value', function () {
         expect(typeof isVowel()).toBe('boolean');
+    });
+    it('should return true if passed "a"', function () {
+        expect(isVowel("a")).toBe(true);
+    });
+    it('should return true if passed "A"', function () {
+        expect(isVowel("A")).toBe(true);
+    });
+    it('should return false if passed "y"', function () {
+        expect(isVowel("y")).toBe(false);
+    });
+    it('should return false when passed 4', function () {
+        expect(isVowel(4)).toBe(false);
+    });
+    it('should return false when passed true', function () {
+        expect(isVowel(true)).toBe(false);
+    });
+    it('should return false when passed false', function () {
+        expect(isVowel(false)).toBe(false);
+    });
+    it('should return false when passed string like "banana"', function () {
+        expect(isVowel("banana")).toBe(false);
+    });
+    it('should return false when passed no value', function () {
+        expect(isVowel()).toBe(false);
+    });
+    it('should should return false when passed null', function () {
+        expect(isVowel(null)).toBe(false);
     });
 });

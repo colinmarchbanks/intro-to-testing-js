@@ -20,3 +20,19 @@ const isEven = function (x) {
     return parseFloat(x) % 2 === 0;
 
 };
+
+const isVowel = function(x){
+    if (x === 'A' || x === 'a'){
+        return true;
+    }
+    else if (x === 'E' || x === 'e'){
+        return true;
+    }
+    else if (x === 'I' || x === 'i'){
+        return true;
+    }
+    else if (x === 'o' || x === 'o'){
+        return true;
+    }
+    else return x === 'U' || x === 'u';
+};
